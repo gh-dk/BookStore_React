@@ -1,0 +1,17 @@
+.boxtoe {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+  outline: 4px solid black;
+  color: black;
+  font-size: 50px;
+}
+
+.boxtoe span {
+  outline: 3px solid black;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
