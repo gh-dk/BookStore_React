@@ -305,6 +305,26 @@ a {
   color: white;
 }
 
+.box .card span button.delete {
+  color: red;
+  border: 1px solid red;
+}
+
+.box .card span button.delete:hover {
+  background: red;
+  color: white;
+}
+
+.box .card span .edit button {
+  color: green;
+  border: 1px solid green;
+}
+
+.box .card span .edit button:hover {
+  background: green;
+  color: white;
+}
+
 .contact {
   background: #043e7377;
 }
