@@ -12,6 +12,7 @@ import {
 import AdminLogin from "./view/AdminLogin";
 import ProductForm from "./view/ProductForm";
 import Read from "./view/Read";
+import { getAllBooks, getBooksById } from "./model/employee.model";
 // import Suduku from "./component/Suduku";
 
 const routes = [
@@ -27,6 +28,7 @@ const routes = [
       {
         path: "home",
         element: <Home />,
+        loader: async () => await getAllBooks(),
       },
       {
         path: "login",
@@ -37,8 +39,16 @@ const routes = [
         element: <ProductForm />,
       },
       {
+        path: "editproduct/:id",
+        element: <ProductForm />,
+      },
+      {
         path: "read/:id",
         element: <Read />,
+        loader: async ({ params }) => {
+          const responseData = await getBooksById(params.id);
+          return responseData[0];
+        },
       },
     ],
   },

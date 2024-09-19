@@ -15,7 +15,7 @@ function Nav() {
         <section>
           <Link to="login">login</Link>
 
-          <a className="login-btn red">Logout</a>
+          <a href="logout" className="login-btn red">Logout</a>
         </section>
       </ul>
     </div>
